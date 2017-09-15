@@ -1,4 +1,4 @@
-name: paasui-dev bus refresh mod
+name: paasui-dev bus refresh
 
 server:
   port: 8099

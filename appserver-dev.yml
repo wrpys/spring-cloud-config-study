@@ -1,4 +1,4 @@
-name: appserver-dev bus refresh mod
+name: appserver-dev bus refresh
 
 server:
   port: 8082
