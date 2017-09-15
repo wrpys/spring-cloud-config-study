@@ -1,0 +1,32 @@
+name: paasui-test
+
+server:
+  port: 8099
+  context-path: /paas-ui
+
+spring:
+  mvc:
+    view:
+      prefix: /view/
+      suffix: .jsp
+
+#该配置是让Hystrix的超时时间改为5秒
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
+app-server:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+
+logging:
+  path: /logs
+  file: paas-ui.log
+  level:
+    root: info
+
+appserverUrl: http://appserver/paas/v1/appserver/

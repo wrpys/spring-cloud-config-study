@@ -1,0 +1,24 @@
+name: appserver
+
+server:
+  port: 8082
+  context-path: /paas/v1/appserver
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/user_test
+    username: root
+    password: 123456
+
+mybatis:
+  mapperLocations: classpath:com/newland/paas/appserver/model/mybatis/*.xml
+
+pagehelper:
+  helper-dialect: mysql
+
+logging:
+  path: logs
+  file: app-server.log
+  level:
+    root: info
